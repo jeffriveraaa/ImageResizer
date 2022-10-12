@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>Image Resizer</title>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div class="header">
+  <a href="#default" class="logo">Image Resizer</a>
+  <div class="header-right">
+    <a href="#myModal" id="myBtn">Help</a>
+  </div>
+</div>
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<h1>How to use Image Resizer?</h1>
+    <p class="p1">Step 1</p>
+	<p>Click "Choose File" button and select the picture you want to resize.</p>
+	<img class="tut-img" src="stp1.png">
+	<img class="tut-img" src="stp1-1.png">
+    <p class="p1">Step 2</p>
+	<p>Use the input boxes to set your desired size for the attached image.</p>	
+	<img class="tut-img" src="stp2.png">
+	<p class="p1">Step 3</p>
+	<p>Right click on your image and save the image to your device.</p>	
+	<img class="tut-img" src="stp3.png">
+	<img class="tut-img" src="stp3-3.png">
+	<p class="p1">Done!</p>
+  </div>
+
+</div>
+				
+<div class="resizer">
+  <input type="file" class="resizer__file">
+  <div class="dimensions">
+    <input type="text" class="resizer__input resizer__input--width" value="0">
+    x
+    <input type="text" class="resizer__input resizer__input--height" value="0">
+    <label class="container">Keep Aspect Ratio
+      <input type="checkbox" class="resizer__aspect" checked>
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+<div class="canvas-div">
+<canvas class="resizer__canvas" width="500" height="500"></canvas>
+</div>
+<footer>
+  <p class="text3">Image Resizer by Jefferson Rivera<br>
+  <a href="mailto:hege@example.com"></a></p>
+</footer>
+<script src="image-resizer-js.js"></script>
+</body>
+</html>
