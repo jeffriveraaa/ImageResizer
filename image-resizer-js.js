@@ -83,3 +83,21 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function candown (target, type) {
+  // (B1) GET CANVAS
+  let canvas = document.getElementById(target);
+ 
+   // (B2) CREATE LINK
+  let anchor = document.createElement("a");
+  anchor.download = "download." + type;
+  anchor.href = canvas.toDataURL("image/" + type);
+ 
+  // (B3) "FORCE DOWNLOAD"
+  anchor.click();
+  anchor.remove();
+ 
+  // (B4) SAFER ALTERNATIVE - LET USER CLICK ON LINK
+  // anchor.innerHTML = "Download";
+  // document.body.appendChild(anchor);
+}

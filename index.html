@@ -3,6 +3,7 @@
 <title>Image Resizer</title>
 <head>
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="home.css">
 </head>
 <body>
@@ -28,16 +29,15 @@
 	<p>Use the input boxes to set your desired size for the attached image.</p>	
 	<img class="tut-img" src="stp2.png">
 	<p class="p1">Step 3</p>
-	<p>Right click on your image and save the image to your device.</p>	
+	<p>Hover or click your mouse in download button to save your image as jpg, png, gif, or webp file.</p>	
 	<img class="tut-img" src="stp3.png">
-	<img class="tut-img" src="stp3-3.png">
 	<p class="p1">Done!</p>
   </div>
 
 </div>
 				
 <div class="resizer">
-  <input type="file" class="resizer__file">
+  	  <input type="file" class="resizer__file">
   <div class="dimensions">
     <input type="text" class="resizer__input resizer__input--width" value="0">
     x
@@ -47,9 +47,19 @@
       <span class="checkmark"></span>
     </label>
   </div>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-download"></i> Download
+    </button>
+    <div class="dropdown-content">
+      <a type="button" value="JPG" onclick="candown('demo', 'jpg')"/>JPG</a>
+      <a type="button" value="PNG" onclick="candown('demo', 'png')"/>PNG</a>
+      <a type="button" value="GIF" onclick="candown('demo', 'gif')"/>GIF</a>
+      <a type="button" value="WEBP" onclick="candown('demo', 'webp')"/>WEBP</a>
+    </div>
+  </div>  
 </div>
 <div class="canvas-div">
-<canvas class="resizer__canvas" width="500" height="500"></canvas>
+<canvas id="demo" class="resizer__canvas" width="500" height="500"></canvas>
 </div>
 <footer>
   <p class="text3">Image Resizer by Jefferson Rivera<br>

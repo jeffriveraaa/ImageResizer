@@ -11,6 +11,16 @@ html, body {
   height: calc(var(--vh, 1vh) * 100);
 }
 
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #F9F9F9;
+  width: 100%;
+  overflow:scroll;
+  overflow-x:hidden;
+  }
+
 html {
     overflow: scroll;
     overflow-x: hidden;
@@ -24,6 +34,64 @@ html {
     background: #FF0000;
 }
 
+.dropdown {
+  overflow: hidden;
+  margin: auto;
+}
+
+.dropdown .dropbtn {
+  background-color: #C21010;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 12px 12px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: auto;
+  margin-bottom: 2px;
+  opacity: 1;
+  transition: 0.3s;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #820000;
+}
+
+.dropdown-content {
+  border-radius: 4px;
+  display: none;
+  background-color: #820000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+
+.dropdown-content a {
+  border-radius: 4px;
+  margin: 2px;
+  transition: 0.3s;
+  cursor: pointer;
+  float: none;
+  color: white;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown-content a:hover {
+  background-color: #B25068;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .canvas-div p{
  margin: 0 auto;
  color: white;
@@ -35,12 +103,12 @@ html {
   font-family: sans-serif;
   font-weight: bold;
   padding: 20px;
-  width: 500px;
+  width: 25%;
   margin: 0 auto;
 }
 
-::-webkit-file-upload-button {
-  background-color: #DD5353;
+::-webkit-file-upload-button, input[type=button] {
+  background-color: #C21010;
   border: none;
   color: white;
   padding: 12px 16px;
@@ -56,8 +124,12 @@ html {
   cursor: pointer;
 }
 
+::-webkit-file-upload-button:hover, input[type=button]:hover {
+  opacity: 0.8;
+}
+
 h1{
-  color: #DD5353;
+  color: #C21010;
 }
 
 p.p1{ 
@@ -69,9 +141,7 @@ p.p1{
   padding-bottom: 20px;
   width: 60%;
 }
-::-webkit-file-upload-button:hover {
-  opacity: 0.8;
-}
+
 
 input[type=text], select {
   padding: 12px 20px;
@@ -123,7 +193,7 @@ input[type=text], select {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #DD5353;
+  background-color: #C21010;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -154,8 +224,9 @@ input[type=text], select {
 }
 
 .canvas-div {
+  padding: 20px;
   text-align: center;
-  width: 50%;
+  width: 31.25%;
   background-color: rgba(0, 0, 0, 0);
   margin: 0 auto;
 }
@@ -184,19 +255,11 @@ footer {
 
 * {box-sizing: border-box;}
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #ffffff;
-  width: 100%;
-  overflow:scroll;
-  overflow-x:hidden;
-  }
 
 .header {
   width: 100%;
   overflow: hidden;
-  background-color: #DD5353;
+  background-color: #C21010;
   padding: 12px 10px;
   margin-bottom: 20px;
 }
@@ -279,7 +342,7 @@ img.header-logo {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
   .header a {
     float: none;
     display: block;
