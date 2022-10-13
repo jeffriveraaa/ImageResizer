@@ -92,6 +92,21 @@ html {
   display: block;
 }
 
+.text3{
+  color: #C21010;
+}
+
+a{
+  color: #C21010;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover{
+  opacity: 0.6;
+}
+
 .canvas-div p{
  margin: 0 auto;
  color: white;
