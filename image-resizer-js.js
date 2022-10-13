@@ -90,7 +90,7 @@ function candown (target, type) {
  
    // (B2) CREATE LINK
   let anchor = document.createElement("a");
-  anchor.download = "download." + type;
+  anchor.download = "resized-image." + type;
   anchor.href = canvas.toDataURL("image/" + type);
  
   // (B3) "FORCE DOWNLOAD"
